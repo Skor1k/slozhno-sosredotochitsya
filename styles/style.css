@@ -3,7 +3,7 @@
 /* Обложка */
 
 .page {
-  font-family: var(--font-family);
+  font-family: var(--font-family, 'IBM Plex mono', 'Helvetica', 'Arial', monospace);
   font-size: var(--font-size);
   line-height: var(--line-height);
   color: var(--text-color);
@@ -13,6 +13,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .header {
@@ -25,7 +26,7 @@
   padding: 10px;
 }
 
-.header::before {
+.decorated-zone::before {
   content: '';
   position: absolute;
   display: block;
@@ -37,7 +38,7 @@
   inset-block-start: 10px;
 }
 
-.header::after {
+.decorated-zone::after {
   content: '';
   position: absolute;
   display: block;
@@ -91,9 +92,14 @@
   display: var(--visible-rec, none);
   align-items: center;
   gap: 10px;
+  text-transform: uppercase;
   color: var(--accent-color);
   inset-block-start: 11px;
   inset-inline-end: 19px;
+}
+
+.header__rec::before {
+  content: 'rec';
 }
 
 .header__rec::after {
@@ -133,7 +139,7 @@
 }
 
 .content__section-title {
-  font-family: var(--font-family);
+  font-family: var(--font-family, 'IBM Plex mono', 'Helvetica', 'Arial', monospace);
   font-size: var(--font-size);
   line-height: var(--line-height);
   color: var(--title-color);
@@ -146,7 +152,7 @@
 }
 
 .content__title {
-  font-family: var(--font-family);
+  font-family: var(--font-family, 'IBM Plex mono', 'Helvetica', 'Arial', monospace);
   font-size: var(--font-size);
   line-height: var(--line-height);
   font-weight: 700;
@@ -182,20 +188,22 @@
 /* Галерея изображений */
 
 .content__section.gallery {
-  grid-template-rows: auto 142px 355px 237px 355px 237px;
   gap: 10px;
 }
 
 .gallery__images {
+  
   inline-size: 100%;
   block-size: 100%;
 }
 
 .gallery__images-item {
+  display: block;
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
   block-size: 100%;
+  
 }
 
 /* Футер */
@@ -240,12 +248,12 @@
     padding: 20px;
   }
 
-  .header::before {
+  .decorated-zone::before {
     inset-inline-end: 20px;
     inset-block-start: 20px;
   }
   
-  .header::after {
+  .decorated-zone::after {
     inset-inline-start: 20px;
     inset-block-end: 20px;
   }
@@ -272,8 +280,8 @@
     padding: 60px 20px;
   }
 
-  .content__section {
-    grid-template-columns: 236px 1fr 1fr;
+  .content__section-title {
+    max-inline-size: 236px;
   }
 
   .why .content__section-article,
@@ -298,7 +306,6 @@
   }
 
   .content__section.gallery {
-    grid-template-rows: auto 192px 230px 318px;
     gap: 20px;
   }
 
@@ -338,12 +345,12 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .what .content__section-article {
-    grid-column: span 1;
-    grid-row: 2/3;
+  .content__section-title {
+    max-inline-size: 315px;
   }
-
-  .content__section.gallery {
-    grid-template-rows: auto 260px 315px 428px;
+  
+  .what .content__section-article {
+    grid-column: span 1;  
+    grid-row: 2/3;
   }
 }
