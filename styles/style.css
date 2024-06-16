@@ -13,7 +13,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
 }
 
 .header {
@@ -192,7 +192,7 @@
 }
 
 .gallery__images {
-  
+
   inline-size: 100%;
   block-size: 100%;
 }
@@ -203,7 +203,7 @@
   object-position: center;
   inline-size: 100%;
   block-size: 100%;
-  
+
 }
 
 /* Футер */
@@ -243,7 +243,7 @@
 /* Адаптив от 768 */
 
 @media (width >= 768px) {
-  
+
   .header {
     padding: 20px;
   }
@@ -252,7 +252,7 @@
     inset-inline-end: 20px;
     inset-block-start: 20px;
   }
-  
+
   .decorated-zone::after {
     inset-inline-start: 20px;
     inset-block-end: 20px;
@@ -348,9 +348,9 @@
   .content__section-title {
     max-inline-size: 315px;
   }
-  
+
   .what .content__section-article {
-    grid-column: span 1;  
+    grid-column: span 1;
     grid-row: 2/3;
   }
 }
