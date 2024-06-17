@@ -138,6 +138,13 @@
   gap: 20px;
 }
 
+.content__horizontal {
+  display: grid;
+  grid-column: span 3;
+  grid-row: 2/3;
+  gap: 20px;
+}
+
 .content__section-title {
   font-family: var(--font-family, 'IBM Plex mono', 'Helvetica', 'Arial', monospace);
   font-size: var(--font-size);
