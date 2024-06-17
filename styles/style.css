@@ -140,8 +140,6 @@
 
 .content__horizontal {
   display: grid;
-  grid-column: span 3;
-  grid-row: 2/3;
   gap: 20px;
 }
 
@@ -354,19 +352,15 @@
 
   .content__section-title {
     max-inline-size: 315px;
-    grid-column: span 1;
   }
 
   .content__horizontal {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: span 3;
     grid-row: 2/3;
-    gap: 20px;
   }
 
   .what .content__section-article {
     grid-column: span 1;
-    /* grid-row: 2/3; */
   }
 }
